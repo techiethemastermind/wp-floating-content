@@ -10,7 +10,7 @@ if( !class_exists('WFC_ADMIN') ) {
 
         public function __construct () {
 
-            add_action('wfc_admin_output', array(&$this, 'output'), 10, 1);
+            add_action('wfc_admin_output', array(&$this, 'output'), 10, 2);
         }
 
         /**

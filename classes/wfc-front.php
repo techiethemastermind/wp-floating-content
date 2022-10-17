@@ -7,7 +7,7 @@ if( !class_exists('WFC_FRONT') ) {
         public function __construct () {
 
             if (!is_admin()) {
-                add_action('wp', array(&$this, 'wfc_front_output'), 10, 2);
+                add_action('wp', array(&$this, 'wfc_front_output'), 10, 3);
             }
         }
 

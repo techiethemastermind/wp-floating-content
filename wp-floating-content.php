@@ -27,8 +27,8 @@ class WP_FLOATING_CONTENT {
     }
 
     public static function wfc_plugin_init () {
-        register_activation_hook( __FILE__, 'wfc_plugin_active_hook' );
-        register_uninstall_hook(__FILE__, 'wfc_plugin_uninstall_hook');
+        register_activation_hook( __FILE__, array(&$this, 'wfc_plugin_active_hook'), 10, 1);
+        register_uninstall_hook(__FILE__, array(&$this, 'wfc_plugin_uninstall_hook'), 10, 4);
         add_action('admin_menu', array(__class__, 'wfc_admin_menu'));
     }
 
