@@ -73,7 +73,7 @@ class WP_FLOATING_CONTENT {
 
         $page = add_menu_page(
            __( 'WP Floating Content', 'textdomain' ),
-            'WFC Manager',
+            'Imma Sticky',
             'manage_options',
             'wp_floating_content',
             array(__class__, 'wfc_manager_func'),
