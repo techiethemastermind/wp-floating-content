@@ -1,11 +1,11 @@
 <?php
 /**
 * Plugin Name: WP Floating Content
-* Plugin URI: http://test.com
+* Plugin URI: http://imma.com
 * Description: Create Smart WP sticky sidebar
 * Version: 1.0.0
-* Author: @techiethemastermind
-* Author URI: http://techiethemastermind.com
+* Author: @imma
+* Author URI: http://imma.com
 * License: GPL2
 */
 
@@ -24,11 +24,11 @@ class WP_FLOATING_CONTENT {
         include_once('classes/wfc-front.php');
         add_action('init', array( &$this, 'wfc_plugin_init'));
         add_action('init', array( &$this, 'wfc_assets_load'));
+        register_activation_hook( __FILE__, array(&$this, 'wfc_plugin_active_hook'), 10, 1);
+        register_uninstall_hook(__FILE__, array(&$this, 'wfc_plugin_uninstall_hook'), 10, 4);
     }
 
     public static function wfc_plugin_init () {
-        register_activation_hook( __FILE__, array(&$this, 'wfc_plugin_active_hook'), 10, 1);
-        register_uninstall_hook(__FILE__, array(&$this, 'wfc_plugin_uninstall_hook'), 10, 4);
         add_action('admin_menu', array(__class__, 'wfc_admin_menu'));
     }
 
