@@ -33,6 +33,9 @@
     <div class="wfc-panel-div">
         <img src="<?php echo plugins_url() . '/'. WFC_PLUGIN_DOMAIN . '/assets/img/reactpress-guide.jpg' ?>" alt="">
     </div>
+    <?php endif ?>
+
+    <?php if ($isSlugGenerated) : ?>
     <div class="wfc-panel-div">
         <label>4. Installed Done! </label>
         <p class="label">Please confirm <a href="<?php echo site_url() . '/imma' ?>" target="_blank">Imma app</a> is working. If not working then please contact to developer team!</p>

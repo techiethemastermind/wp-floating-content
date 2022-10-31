@@ -157,6 +157,18 @@ if( !class_exists('WFC_ADMIN') ) {
         }
 
         /**
+         * Check slug is generated or not
+         */
+        private function isSlugGenerated () {
+            global $wpdb;
+            if ($wpdb->get_row("SELECT post_name FROM wp_posts WHERE post_name = 'imma'", 'ARRAY_A')) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        /**
          * Output Admin UI
          * @return html
          */
@@ -167,6 +179,7 @@ if( !class_exists('WFC_ADMIN') ) {
             $pages = self::pages();
             $isReactPressActivated = self::isReactPressActivated();
             $isImmaUploaded = self::isImmaUploaded();
+            $isSlugGenerated = self::isSlugGenerated();
             
             include_once(WFC_PLUGIN_PATH . '/template/dashboard.php');
         }
