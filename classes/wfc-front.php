@@ -58,15 +58,8 @@ if( !class_exists('WFC_FRONT') ) {
                 }
                 
                 $style = $style_p . $style_x . $style_y;
-            ?>
-
-                <div class="wfc_sticky" style="<?php echo $style; ?> z-index: 99999">
-                    <a href="<?php echo $link ?>">
-                        <img class="" src="<?php echo $sticky_url; ?>" alt="" width="<?php echo $width; ?>" height="<?php echo $height ?>">
-                    </a>
-                </div>
-
-            <?php
+            
+                include_once(WFC_PLUGIN_PATH . '/template/front-sticky.php');
             }
         }
     }

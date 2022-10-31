@@ -15,6 +15,7 @@ define( 'WFC_PLUGIN_VERSION', '1.0.0' );
 define( 'WFC_DB_VERSION', '1.0.0' );
 define( 'WFC_PLUGIN_DOMAIN', 'wp-floating-content' );
 define( 'WFC_TABLE_NAME',  'wfc_options');
+define( 'WFC_PLUGIN_PATH', WP_PLUGIN_DIR . '/wp-floating-content' );
 
 class WP_FLOATING_CONTENT {
 
@@ -73,7 +74,7 @@ class WP_FLOATING_CONTENT {
 
         $page = add_menu_page(
            __( 'WP Floating Content', 'textdomain' ),
-            'Imma Sticky',
+            'Imma App',
             'manage_options',
             'wp_floating_content',
             array(__class__, 'wfc_manager_func'),

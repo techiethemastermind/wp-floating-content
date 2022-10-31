@@ -1,13 +1,22 @@
-.afc-panel-div {
-    padding: 8px 0;
+.wfc-panel-div {
+    padding: 6px 0;
 }
-.afc-panel-div label {
+.wfc-panel-div label {
     width: 15%;
     float: left;
-    text-align: right;
-    margin-top: 6px;
+    text-align: left;
+    padding: 6px 0;
     font-weight: bold;
     margin-right: 15px;
+}
+
+.wfc-panel-div p.label {
+    font-size: 14px;
+    padding: 6px 0;
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 600;
+    display: inline-block;
 }
 
 /** Account Menu **/
@@ -38,4 +47,49 @@
 
 #top-menu-nav .wfc-account a {
     padding-bottom: 0 !important;
+}
+
+/** Tab Menu **/
+.wfc-tabs {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    margin: 15px 0 0;
+    border-bottom: none;
+}
+
+.wfc-tabs .wfc-tab-link {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.wfc-tabs .wfc-tab-link:hover {
+    background-color: #ddd;
+}
+
+.wfc-tabs .wfc-tab-link.active {
+    background-color: #ccc;
+}
+
+.wfc-tabs .wfc-tab-link:focus {
+    box-shadow: none;
+}
+
+.wfc-tabs-container {
+    padding: 15px;
+    background-color: #fff;
+    position: relative;
+    border: 1px solid #ccc;
+}
+
+.d-none {
+    display: none;
 }
