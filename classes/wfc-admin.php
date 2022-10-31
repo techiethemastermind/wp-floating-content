@@ -83,7 +83,7 @@ if( !class_exists('WFC_ADMIN') ) {
                         $fileData = $_FILES['wfc_imma_upload'];
 
                         if ($fileData['size'] > 0) {
-                            $uploader = new ZIP_Uploader( 'zips' );
+                            $uploader = new ZIP_Uploader( 'imma' );
                             $result   = $uploader->upload($_FILES['wfc_imma_upload']);
                         }
                     }
