@@ -40,5 +40,13 @@
         <label>4. Installed Done! </label>
         <p class="label">Please confirm <a href="<?php echo site_url() . '/imma' ?>" target="_blank">Imma app</a> is working. If not working then please contact to developer team!</p>
     </div>
+
+    <div class="wfc-panel-div">
+        <label>5. App Urls </label>
+        <p class="label">
+            Member's view: <a href="<?php echo site_url() . '/imma' ?>" target="_blank">Member's view page</a> <br />
+            Admin's view: <a href="<?php echo site_url() . '/imma/#/admin' ?>" target="_blank">Admin's view page</a>
+        </p>
+    </div>
     <?php endif ?>
 </form>

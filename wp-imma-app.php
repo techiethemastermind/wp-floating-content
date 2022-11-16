@@ -1,8 +1,8 @@
 <?php
 /**
-* Plugin Name: WP Floating Content
+* Plugin Name: WP IMMA APP
 * Plugin URI: http://imma.com
-* Description: Create Smart WP sticky sidebar
+* Description: IMMA React APP management
 * Version: 1.0.0
 * Author: @imma
 * Author URI: http://imma.com
@@ -13,11 +13,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 define( 'WFC_PLUGIN_VERSION', '1.0.0' );
 define( 'WFC_DB_VERSION', '1.0.0' );
-define( 'WFC_PLUGIN_DOMAIN', 'wp-floating-content' );
+define( 'WFC_PLUGIN_DOMAIN', 'wp-imma-app' );
 define( 'WFC_TABLE_NAME',  'wfc_options');
-define( 'WFC_PLUGIN_PATH', WP_PLUGIN_DIR . '/wp-floating-content' );
+define( 'WFC_PLUGIN_PATH', WP_PLUGIN_DIR . '/wp-imma-app' );
 
-class WP_FLOATING_CONTENT {
+class WP_IMMA_REACT {
 
     public function __construct () {
 
@@ -76,7 +76,7 @@ class WP_FLOATING_CONTENT {
            __( 'WP Floating Content', 'textdomain' ),
             'Imma App',
             'manage_options',
-            'wp_floating_content',
+            'wp_imma_app',
             array(__class__, 'wfc_manager_func'),
             'dashicons-align-center',
             6
@@ -102,4 +102,4 @@ class WP_FLOATING_CONTENT {
     }
 }
 
-new WP_FLOATING_CONTENT();
+new WP_IMMA_REACT();
