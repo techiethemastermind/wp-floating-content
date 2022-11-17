@@ -30,19 +30,19 @@
 
 /** Account Menu **/
 #top-menu-nav .wfc-account {
-    align-items: center;
     cursor: pointer;
     display: none;
-    vertical-align: middle;
 }
 
 #top-menu-nav .wfc-account::before {
     content: '';
-    background-image: url(/wp-content/plugins/wp-floating-content/assets/img/icon.svg);
+    background-image: url(/wp-content/plugins/wp-imma-app/assets/img/icon.svg);
     display: block;
     width: 30px;
     height: 30px;
     margin-right: 5px;
+    margin-top: -8px;
+    opacity: .6;
 }
 
 #top-menu-nav .wfc-account a {

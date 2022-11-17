@@ -4,7 +4,13 @@ jQuery(document).ready(function($){
 
 	// Check logined or not
 	if (localStorage.getItem('accessToken')) {
-		$('.wfc-account').css('display', 'inline-flex');
+
+		if ($('.wfc-account').length > 0) {
+			$('.wfc-account').css('display', 'inline-flex');
+		} else {
+			$('#top-menu-nav ul').append(logout_menu);
+			$('.wfc-account').css('display', 'inline-flex');
+		}
 	}
 
 	// When Click logout button
@@ -21,3 +27,7 @@ jQuery(document).ready(function($){
 		$(targetContainer).css('display', 'block');
 	});
 });
+
+let logout_menu = `<li id="menu-item-999" class="wfc-account menu-item menu-item-type-custom menu-item-object-custom">
+					  <a href="#">Logout</a>
+				   </li>`;
