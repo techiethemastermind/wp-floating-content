@@ -93,3 +93,9 @@
 .d-none {
     display: none;
 }
+
+/* For IMMA app */
+body input.MuiInputBase-input {
+    padding: 16.5px 14px !important;
+    border: none;
+}
