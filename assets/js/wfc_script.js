@@ -11,12 +11,27 @@ jQuery(document).ready(function($){
 			$('#top-menu-nav ul').append(logout_menu);
 			$('.wfc-account').css('display', 'inline-flex');
 		}
+	} else {
+		if ($('.wfc-account').length > 0) {
+			$('.wfc-account').css('display', 'inline-flex');
+		} else {
+			$('#top-menu-nav ul').append(login_menu);
+			$('.wfc-account').css('display', 'inline-flex');
+		}
 	}
 
 	// When Click logout button
 	$('.wfc-account').on('click', function(e) {
-		localStorage.removeItem('accessToken');
-		window.location.reload();
+
+		if ($(this).attr('data-action') == 'logout') {
+			localStorage.removeItem('accessToken');
+			window.location.reload();
+		}
+
+		if ($(this).attr('data-action') == 'login') {
+			let loginUrl = window.location.protocol + '//' + window.location.host + window.location.pathname + '#/authentication/login'
+			window.location.href = loginUrl;
+		}
 	});
 
 	$('.wfc-tab-link').on('click', (e) => {
@@ -28,6 +43,10 @@ jQuery(document).ready(function($){
 	});
 });
 
-let logout_menu = `<li id="menu-item-999" class="wfc-account menu-item menu-item-type-custom menu-item-object-custom">
+const login_menu = `<li id="menu-item-999" data-action="login" class="wfc-account menu-item menu-item-type-custom menu-item-object-custom">
+					  <a href="#">Login</a>
+				   </li>`;
+
+const logout_menu = `<li id="menu-item-999" data-action="logout" class="wfc-account menu-item menu-item-type-custom menu-item-object-custom">
 					  <a href="#">Logout</a>
 				   </li>`;
