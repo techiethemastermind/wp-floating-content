@@ -101,3 +101,55 @@ body input.MuiInputBase-input {
     padding: 16.5px 14px !important;
 	border: none;
 }
+
+.imma-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 240px;
+    z-index: 999;
+    top: 29px;
+    box-shadow: rgb(0 0 0 / 31%) 0px 0px 1px 0px, rgb(0 0 0 / 25%) 0px 5px 8px -2px;
+    border-radius: 4px;
+    cursor: auto;
+}
+  
+.imma-dropdown span {
+    color: #666;
+    padding: 20px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.imma-dropdown span.border-bottom {
+    border-bottom: 1px solid #ddd;
+}
+  
+.imma-dropdown button {
+    font-size: 0.875rem;
+    line-height: 1.75;
+    min-width: 64px;
+    padding: 5px 15px;
+    border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border: 1px solid rgb(111 111 111 / 50%);
+    width: 100%;
+    text-transform: none;
+    box-shadow: rgb(154 154 154) 0px 0px 2px 0px;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+    outline: 0px;
+    margin: 0px;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    text-decoration: none;
+}
