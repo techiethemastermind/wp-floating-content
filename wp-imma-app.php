@@ -26,7 +26,7 @@ class WP_IMMA_REACT {
         add_action('init', array( &$this, 'wfc_plugin_init'));
         add_action('init', array( &$this, 'wfc_assets_load'));
         register_activation_hook( __FILE__, array(&$this, 'wfc_plugin_active_hook'), 10, 1);
-        register_uninstall_hook(__FILE__, 'wfc_plugin_uninstall_hook');
+        // register_uninstall_hook(__FILE__, array(&$this, 'wfc_plugin_uninstall_hook'), 10, 4);
     }
 
     public static function wfc_plugin_init () {
