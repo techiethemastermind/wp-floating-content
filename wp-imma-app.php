@@ -3,7 +3,7 @@
 * Plugin Name: WP IMMA APP
 * Plugin URI: http://imma.com
 * Description: IMMA React APP management
-* Version: 1.0.0
+* Version: 1.1.0
 * Author: @imma
 * Author URI: http://imma.com
 * License: GPL2
@@ -11,7 +11,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'WFC_PLUGIN_VERSION', '1.0.0' );
+define( 'WFC_PLUGIN_VERSION', '1.1.0' );
 define( 'WFC_DB_VERSION', '1.0.0' );
 define( 'WFC_PLUGIN_DOMAIN', 'wp-imma-app' );
 define( 'WFC_TABLE_NAME',  'wfc_options');
@@ -26,7 +26,7 @@ class WP_IMMA_REACT {
         add_action('init', array( &$this, 'wfc_plugin_init'));
         add_action('init', array( &$this, 'wfc_assets_load'));
         register_activation_hook( __FILE__, array(&$this, 'wfc_plugin_active_hook'), 10, 1);
-        register_uninstall_hook(__FILE__, array(&$this, 'wfc_plugin_uninstall_hook'), 10, 4);
+        register_uninstall_hook(__FILE__, 'wfc_plugin_uninstall_hook');
     }
 
     public static function wfc_plugin_init () {

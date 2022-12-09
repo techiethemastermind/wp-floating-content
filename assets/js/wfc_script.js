@@ -36,18 +36,18 @@ jQuery(document).ready(function($){
 		e.stopPropagation();
 
 		if ($(this).attr('data-action') == 'login') {
-			let loginUrl = window.location.protocol + '//' + window.location.host + window.location.pathname + '#/authentication/login'
+			let loginUrl = window.location.protocol + '//' + window.location.host + window.location.pathname + '#/authentication/login-unguarded'
 			window.location.href = loginUrl;
 		}
 
 		if ($(e.target).attr('id') && $(e.target).attr('id') === 'imma-account-logout') {
 			localStorage.removeItem('accessToken');
-			$('.wfc-account').find('.imma-dropdown').toggle('hide');
+			$('.wfc-account').find('.imma-dropdown').hide('fast');
 			window.location.reload();
 		} else if ($(this).attr('data-action') == 'account') {
 			
 			if ($(e.target).attr('id') !== 'imma-account-name') {
-				$dropdown = $(this).find('.imma-dropdown').toggle('show');
+				$dropdown = $(this).find('.imma-dropdown').show('fast');
 			}			
 		}
 	});
@@ -59,14 +59,14 @@ jQuery(document).ready(function($){
 		let targetContainer = $(e.target).attr('tab-target');
 		$(targetContainer).css('display', 'block');
 	});
-});
 
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function (event) {
-	if (!event.target.matches('.imma-dropdown')) {
-		$('.wfc-account').find('.imma-dropdown').toggle('hide');
+	// Close the dropdown menu if the user clicks outside of it
+	window.onclick = function (event) {
+		if (!event.target.matches('.imma-dropdown')) {
+			$('.wfc-account').find('.imma-dropdown').hide('fast');
+		}
 	}
-}
+});
 
 const login_menu = `<li id="menu-item-999" data-action="login" class="wfc-account menu-item menu-item-type-custom menu-item-object-custom">
 						<span>Login</span>
