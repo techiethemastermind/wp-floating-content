@@ -34,7 +34,10 @@ if( !class_exists('WFC_FRONT') ) {
     
             $existing_data = self::wfc_data();
     
-            if (count($existing_data) > 0) {
+            if (count($existing_data) > 0 
+                && isset($existing_data['pages']) 
+                && ($existing_data['pages'] !== 'null')
+                && in_array($slug, json_decode($existing_data['pages']))) {
 
                 $sticky_url = '#';
                 if (isset($existing_data['post_id'])) {
