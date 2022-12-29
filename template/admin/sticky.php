@@ -134,8 +134,9 @@
                                     <select name="pages[]" id="wfc_pages" multiple="multiple" style="width:80%">
                                         <?php foreach($pages as $page) : ?>
                                         <option value="<?php echo $page['slug'] ?>" 
-                                            <?php if(isset($data['pages']) && in_array($page['slug'], json_decode($data['pages']))) echo 'selected="selected"' ?>>
-                                            <?php echo $page['title'] ?></option>
+                                            <?php if(isset($data['pages']) && ($data['pages'] !== 'null') && in_array($page['slug'], json_decode($data['pages']))) echo 'selected="selected"' ?>>
+                                            <?php echo $page['title'] ?>
+                                        </option>
                                         <?php endforeach ?>
                                     </select>
                                 </div>

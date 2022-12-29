@@ -11,7 +11,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'WFC_PLUGIN_VERSION', '1.1.0' );
+define( 'WFC_PLUGIN_VERSION', '1.2.0' );
 define( 'WFC_DB_VERSION', '1.0.0' );
 define( 'WFC_PLUGIN_DOMAIN', 'wp-imma-app' );
 define( 'WFC_TABLE_NAME',  'wfc_options');

@@ -34,7 +34,8 @@ if( !class_exists('WFC_FRONT') ) {
     
             $existing_data = self::wfc_data();
     
-            if (count($existing_data) > 0 && in_array($slug, json_decode($existing_data['pages']))) {
+            if (count($existing_data) > 0) {
+
                 $sticky_url = '#';
                 if (isset($existing_data['post_id'])) {
                     $sticky_url = wp_get_attachment_url($existing_data['post_id']);
