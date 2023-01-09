@@ -97,11 +97,6 @@
 }
 
 /* For IMMA app */
-body input.MuiInputBase-input {
-    padding: 16.5px 14px !important;
-	border: none;
-}
-
 .imma-dropdown {
     display: none;
     position: absolute;
@@ -152,4 +147,14 @@ body input.MuiInputBase-input {
     vertical-align: middle;
     appearance: none;
     text-decoration: none;
+}
+
+body input.MuiInputBase-input {
+    padding: 8px 12px 9px !important;
+	border: none;
+}
+
+body .MuiTypography-root {
+    padding-bottom: 0;
+    color: #206C91;
 }
