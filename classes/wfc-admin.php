@@ -5,7 +5,7 @@ if( !class_exists('WFC_ADMIN') ) {
     class WFC_ADMIN {
 
         private $_inputs = [
-            'title', 'position_type', 'position_x', 'position_y', 'link', 'pages', 'width', 'repeat_type'
+            'title', 'position_type', 'position_x', 'position_y', 'link', 'pages', 'width', 'repeat_type', 'backend_url'
         ];
 
         public function __construct () {
@@ -73,7 +73,10 @@ if( !class_exists('WFC_ADMIN') ) {
                     }
 
                     foreach($this->_inputs as $input) {
-                        self::update($input, $_POST[$input]);
+
+                        if (isset($_POST[$input])) {
+                            self::update($input, $_POST[$input]);
+                        }
                     }
                 }
 

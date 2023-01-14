@@ -1,3 +1,5 @@
+/** Admin Dashboard Setting **/
+
 .wfc-panel-div {
     padding: 6px 0;
 }
@@ -17,38 +19,6 @@
     line-height: 1.4;
     font-weight: 600;
     display: inline-block;
-}
-
-/** Account Menu **/
-.post-inner.thin {
-    background-color: white;
-}
-
-.entry-header {
-    display: none;
-}
-
-/** Account Menu **/
-#top-menu-nav .wfc-account {
-    cursor: pointer;
-    display: none;
-	float: right;
-}
-
-#top-menu-nav .wfc-account::before {
-    content: '';
-    background-image: url(/wp-content/plugins/wp-imma-app/assets/img/icon.svg);
-    display: block;
-    width: 30px;
-    height: 30px;
-    margin-right: 6px;
-    margin-top: -8px;
-    opacity: .6;
-	position: relative;
-}
-
-#top-menu-nav .wfc-account a {
-    padding-bottom: 0 !important;
 }
 
 /** Tab Menu **/
@@ -92,8 +62,59 @@
     border: 1px solid #ccc;
 }
 
+.wfc-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+.wfc-col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+}
+.wfc-col-left {
+    flex: 3
+}
+.wfc-col-right {
+    flex: 1
+}
+
 .d-none {
     display: none;
+}
+
+/** Account Menu **/
+.post-inner.thin {
+    background-color: white;
+}
+
+.entry-header {
+    display: none;
+}
+
+/** Account Menu **/
+#top-menu-nav .wfc-account {
+    cursor: pointer;
+    display: none;
+	float: right;
+}
+
+#top-menu-nav .wfc-account::before {
+    content: '';
+    background-image: url(/wp-content/plugins/wp-imma-app/assets/img/icon.svg);
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-right: 6px;
+    margin-top: -8px;
+    opacity: .6;
+	position: relative;
+}
+
+#top-menu-nav .wfc-account a {
+    padding-bottom: 0 !important;
 }
 
 /* For IMMA app */
