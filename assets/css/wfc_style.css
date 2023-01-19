@@ -117,6 +117,18 @@
     padding-bottom: 0 !important;
 }
 
+#top-menu-nav .wfc-block {
+    display: block !important;
+}
+
+#top-menu-nav .wfc-flex {
+    display: flex !important;
+}
+
+body .et_mobile_menu li span {
+    padding: 10px;
+}
+
 /* For IMMA app */
 .imma-dropdown {
     display: none;
@@ -177,5 +189,9 @@ body input.MuiInputBase-input {
 
 body .MuiTypography-root {
     padding-bottom: 0;
+    color: #206C91;
+}
+
+#root .MuiBox-root h3 {
     color: #206C91;
 }

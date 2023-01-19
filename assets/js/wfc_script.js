@@ -10,21 +10,20 @@ jQuery(document).ready(function($){
 
 		accountMenu.find('span#imma-account-name').text(user.name);
 
-		if ($('.wfc-account').length > 0) {
-			$('.wfc-account').css('display', 'inline-flex');
-		} else {
+		if ($('.wfc-account').length < 1) {
 			$('#top-menu-nav ul').append(accountMenu);
-			$('.wfc-account').css('display', 'inline-flex');
+			$('#mobile_menu').append(logout_menu);
 		}
 		
 	} else {
-		if ($('.wfc-account').length > 0) {
-			$('.wfc-account').css('display', 'inline-flex');
-		} else {
+		if ($('.wfc-account').length < 1) {
 			$('#top-menu-nav ul').append(login_menu);
-			$('.wfc-account').css('display', 'inline-flex');
+			$('#mobile_menu').append(login_menu);
 		}
 	}
+
+	$('#top-menu-nav ul').find('.wfc-account').addClass('wfc-flex');
+	$('#mobile_menu').find('.wfc-account').addClass('wfc-block');
 
 	// When Click logout button
 	$('.wfc-account').on('click', function(e) {
@@ -33,7 +32,7 @@ jQuery(document).ready(function($){
 		e.stopPropagation();
 
 		if ($(this).attr('data-action') == 'login') {
-			let loginUrl = window.location.protocol + '//' + window.location.host + window.location.pathname + '/imma/#/authentication/login-unguarded'
+			let loginUrl = window.location.protocol + '//' + window.location.host + window.location.pathname + '/imma/#/authentication/login'
 			window.location.href = loginUrl;
 		}
 
@@ -67,11 +66,12 @@ jQuery(document).ready(function($){
 });
 
 const login_menu = `<li id="menu-item-999" data-action="login" class="wfc-account menu-item menu-item-type-custom menu-item-object-custom">
-						<span>Login</span>
+						<a href="/imma/#/authentication/login">Login</span>
 				   	</li>`;
 
-const logout_menu = `<li id="menu-item-999" data-action="logout" class="wfc-account menu-item menu-item-type-custom menu-item-object-custom">
-						<span>Logout</span>
+const logout_menu = `<li id="menu-item-999" data-action="logout" 
+						class="wfc-account menu-item menu-item-type-post_type menu-item-object-page menu-item-51 et_first_mobile_item">
+						<a href="javascript:void(0)" id="imma-account-logout">Logout</a>
 				   	</li>`;
 
 const account_menu = `<li id="menu-item-999" data-action="account" class="wfc-account menu-item menu-item-type-custom menu-item-object-custom">
