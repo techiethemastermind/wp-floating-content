@@ -32,7 +32,7 @@ jQuery(document).ready(function($){
 		e.stopPropagation();
 
 		if ($(this).attr('data-action') == 'login') {
-			let loginUrl = window.location.protocol + '//' + window.location.host + window.location.pathname + '/imma/#/authentication/login'
+			let loginUrl = window.location.protocol + '//' + window.location.host + window.location.pathname + '/imma/#/authentication/login';
 			window.location.href = loginUrl;
 		}
 
@@ -40,12 +40,12 @@ jQuery(document).ready(function($){
 			localStorage.removeItem('accessToken');
 			localStorage.removeItem('user');
 			$('.wfc-account').find('.imma-dropdown').hide('fast');
-			window.location.reload();
+			window.location.href = window.location.protocol + '//' + window.location.host + window.location.pathname + '/imma/';
 		} else if ($(this).attr('data-action') == 'account') {
 			
 			if ($(e.target).attr('id') !== 'imma-account-name') {
 				$dropdown = $(this).find('.imma-dropdown').show('fast');
-			}			
+			} 
 		}
 	});
 
