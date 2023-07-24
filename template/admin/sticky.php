@@ -140,6 +140,10 @@
                                         <?php endforeach ?>
                                     </select>
                                 </div>
+                                <div class="wfc-panel-div">
+                                    <label>Exclude when site called from:</label>
+                                    <input type="text" name="exclude_from" placeholder="Exclude from" value="<?php echo $data['exclude_from']; ?>" style="width: 40%">
+                                </div>
                             </div>
                         </div>
                     </div>

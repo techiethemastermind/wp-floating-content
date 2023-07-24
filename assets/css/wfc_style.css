@@ -195,3 +195,7 @@ body .MuiTypography-root {
 #root .MuiBox-root h3 {
     color: #206C91;
 }
+
+.tile-icon img {
+	height: 100px;
+}

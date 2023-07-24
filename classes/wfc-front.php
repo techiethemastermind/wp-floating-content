@@ -33,11 +33,17 @@ if( !class_exists('WFC_FRONT') ) {
             $slug = $post->post_name;
     
             $existing_data = self::wfc_data();
+            $isNotExcluded = true;
+
+            if (isset($_SERVER['HTTP_REFERER']) && strstr($_SERVER['HTTP_REFERER'], $existing_data['exclude_from'])) {
+                $isExcluded = false;
+            }
     
             if (count($existing_data) > 0 
                 && isset($existing_data['pages']) 
                 && ($existing_data['pages'] !== 'null')
-                && in_array($slug, json_decode($existing_data['pages']))) {
+                && in_array($slug, json_decode($existing_data['pages']))
+                && $isNotExcluded) {
 
                 $sticky_url = '#';
                 if (isset($existing_data['post_id'])) {

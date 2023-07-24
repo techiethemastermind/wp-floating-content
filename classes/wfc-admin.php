@@ -5,7 +5,7 @@ if( !class_exists('WFC_ADMIN') ) {
     class WFC_ADMIN {
 
         private $_inputs = [
-            'title', 'position_type', 'position_x', 'position_y', 'link', 'pages', 'width', 'repeat_type', 'backend_url'
+            'title', 'position_type', 'position_x', 'position_y', 'link', 'pages', 'width', 'repeat_type', 'backend_url', 'exclude_from'
         ];
 
         public function __construct () {
